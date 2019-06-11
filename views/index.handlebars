@@ -1,5 +1,30 @@
-<div id="home">
+<div class="jumbotron" id="home">
+  <br>
   <div class="container">
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="container col-7">
+       <h1 class="text-center border-dark">Friendly Neighbors</h1>
+      </div> 
+      <div class="col"></div>
+     <button type="button" class="col btn-outline-primary btn" id="login-btn">Login</button>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="container jumbotron">
+    <div class= "row">
+      <div class="col"></div>
+      <div class="col-9">
+        <input class="form-control" type="search" placeholder="Search for an item.." aria-label="Search" id="item-search-bar" />
+      </div>
+      <div class="col">
+        <button class="btn btn-outline-primary" id="search-btn">Search</button>
+      </div>
+    </div>
+  </div>
+
+  {{!-- <div class="container">
     <div class="row">
       <div class="col-8 offset-2">
         <h1>{{msg}}</h1>
@@ -26,7 +51,7 @@
         </ul>
       </div>
     </div>
-  </div>
+  </div> --}}
 </div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
