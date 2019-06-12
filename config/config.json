@@ -1,8 +1,10 @@
 {
   "development": {
     "username": "root",
-    "password": "$ABati0602",
-    "database": "friendlyNeighbor",
+
+    "password": "newpass",
+    "database": "exampledb",
+
     "host": "localhost",
     "dialect": "mysql"
   },
