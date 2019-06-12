@@ -14,6 +14,12 @@ $(document).ready(function () {
     });
       
   });
+  $("#login-btn").on("click", function(event){
+    event.preventDefault();
+    console.log("Knock knock -- Who's there?");
+    console.log("someone is logging in..");
+    
+  })
 });
 
 

@@ -1,4 +1,4 @@
-<div class="jumbotron" id="home">
+<div class="jumbotron" style="background-color: #fff" id="home">
   <br>
   <div class="container">
     <div class="row">
@@ -7,12 +7,59 @@
        <h1 class="text-center border-dark">Friendly Neighbors</h1>
       </div> 
       <div class="col"></div>
-     <button type="button" class="col btn-outline-primary btn" id="login-btn">Login</button>
+
+      {{!-- Login Button  --}}
+      <button type="button" class="col btn-outline-primary btn" id="login-btn" data-toggle="modal" data-target="#loginModal">
+       Login
+      </button>
+
+      {{!-- login modal --}}
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalCenterTitle">Login:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+<form>
+          
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="First name">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Last name">
+    </div>
+  </div><br>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="InputPassword1" placeholder="Password">
+  </div>
+</form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="sumbit" class="btn btn-primary" id="real-login" data-dismiss="modal">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     </div>
   </div>
   <br>
   <br>
-  <div class="container jumbotron">
+  <div class="container jumbotron" style="background-color: #e3f2fd;">
     <div class= "row">
       <div class="col"></div>
       <div class="col-9">
