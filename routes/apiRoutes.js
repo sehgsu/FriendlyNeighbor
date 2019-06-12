@@ -2,23 +2,42 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+  app.get("/api/users/", function(req, res) {
+    db.Users.findAll({}).then(function(dbUsers) {
+      res.json(dbUsers);
+    });
+  });
+
+// get user data by username
+  app.get("/api/users/:username/", function(req,res){
+    db.Users.findOne({ where: {username: req.params.username} }).then(function(dbUsers){
+      res.json(dbUsers);
+    });
+  });
+
+  app.get("/api/transaction/", function(req, res){
+    db.Transaction.findAll({}).then(function(dbTransactions){
+      res.json(dbTransactions)
+    });
+  });
+
+  app.get("/api/inventory/", function(req, res){
+    db.Inventory.findAll({}).then(function(dbInventories){
+      res.json(dbInventories)
     });
   });
 
   // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+  app.post("/api/users", function(req, res) {
+    db.Users.create(req.body).then(function(dbUsers) {
+      res.json(dbUsers);
     });
   });
 
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
+  // Delete an inventory by id
+  app.delete("/api/inventory/:id", function(req, res) {
+    db.Inventory.destroy({ where: { id: req.params.id } }).then(function(dbInventory) {
+      res.json(dbInventory);
     });
   });
 };
