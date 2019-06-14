@@ -1,17 +1,16 @@
 ----------------------------- Users Table ------------------------------
-INSERT INTO users(first_name, last_name, username, passcode)
+INSERT INTO users(first_name, last_name, username, password)
 VALUES("Dre", "Batista", "SmokeyDre", "$ABati0602");
 
-INSERT INTO users(first_name, last_name, username, passcode)
-VALUES("Ish", "Ish-last", "DisMyIsh", "Ish1234");
-
-INSERT INTO users(first_name, last_name, username, passcode)
+INSERT INTO users(first_name, last_name, username, password)
+VALUES("Ish", "Ish-last", "DisMyIsh", "Ish1234word
+INSERT INTO users(first_name, last_name, username, password)
 VALUES("Alex", "Scott-Hughes", "HungryHippo", "Alex1234");
 
-INSERT INTO users(first_name, last_name, username, passcode)
+INSERT INTO users(first_name, last_name, username, password)
 VALUES("Maria", "Hurtado", "MariaImDrunk", "Maria1234");
 
-INSERT INTO users(first_name, last_name, username, passcode)
+INSERT INTO users(first_name, last_name, username, password)
 VALUES("Amanda", "Ryan", "AmandaBaBanda", "Amanda1234");
 
 

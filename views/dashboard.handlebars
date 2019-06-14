@@ -1,0 +1,40 @@
+<div class="jumbotron" style="background-color: #fff" id="home">
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="container col-7">
+       <h1 class="text-center border-dark">Friendly Neighbors</h1>
+      </div> 
+      <div class="col"></div>
+
+      {{!-- Login Button  --}}
+      <button type="button" class="col btn-outline-primary btn" id="login-btn" data-toggle="modal" data-target="#loginModal">
+       Login
+      </button>
+    </div>
+  </div>
+</div> 
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <div class="card mt-4" style="background-color: #e3f2fd;">
+        <div class="card-body">
+          <h5 class="card-title">Inventory</h5>
+          {{!-- <p>
+            <strong>ID</strong>: {{inventory.id}}</p>
+          <p> --}}
+          <p>
+            <strong>Item</strong>: {{inventory.product_name}}
+          </p>
+          <p><b>Category</b>: {{inventory.category}}</p>
+          <p><strong>Price</strong>: {{inventory.price}}</p>
+          <p>
+            <strong>Condition</strong>: {{inventory.conditions}}</p>
+          <p>
+            <strong>Description:</strong> {{example.description}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
