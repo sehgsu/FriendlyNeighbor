@@ -5,5 +5,5 @@ module.exports = function(sequelize, DataTypes) {
     username: DataTypes.STRING,
     passcode: DataTypes.STRING
   });
-return Users;
+  return Users;
 };
