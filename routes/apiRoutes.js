@@ -8,22 +8,23 @@ module.exports = function(app) {
     });
   });
 
-// get user data by username
-  app.get("/api/users/:username/", function(req,res){
-    db.Users.findOne({ where: {username: req.params.username} }).then(function(dbUsers){
+  // get user data by username
+  app.get("/api/users/:username/", function(req, res) {
+    db.Users.findOne({ where: {username: req.params.username}}).then(function(dbUsers) {
       res.json(dbUsers);
+  }
+    );
+  });
+
+  app.get("/api/transaction/", function(req, res) {
+    db.Transaction.findAll({}).then(function(dbTransactions) {
+      res.json(dbTransactions);
     });
   });
 
-  app.get("/api/transaction/", function(req, res){
-    db.Transaction.findAll({}).then(function(dbTransactions){
-      res.json(dbTransactions)
-    });
-  });
-
-  app.get("/api/inventory/", function(req, res){
-    db.Inventory.findAll({}).then(function(dbInventories){
-      res.json(dbInventories)
+  app.get("/api/inventory/", function(req, res) {
+    db.Inventory.findAll({}).then(function(dbInventory) {
+      res.json(dbInventory);
     });
   });
 

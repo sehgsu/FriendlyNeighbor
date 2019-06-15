@@ -23,161 +23,161 @@ VALUES("Amanda", "Ryan", "AmandaBaBanda", "Amanda1234");
 ------------------------------ inventories Table --------------------
 
 -- miscellaneous --
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Batteries", "Miscellaneous", 638.87, 3);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Batteries", "Miscellaneous", 638.87, 3);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Batteries", "Miscellaneous", 638.87, 3);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Batteries", "Miscellaneous", 638.87, 3);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Batteries", "Miscellaneous", 638.87, 3);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Batteries", "Miscellaneous", 638.87, 3);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Batteries", "Miscellaneous", 638.87, 3);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Batteries", "Miscellaneous", 638.87, 3);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Batteries", "Miscellaneous", 638.87, 3);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Batteries", "Miscellaneous", 638.87, 3);
 
 
 -- fashion --
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Gucci Flip-Flops", "Fashion", 3.50, 999);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Gucci Flip-Flops", "Fashion", 3.50, 999);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Gucci Flip-Flops", "Fashion", 3.50, 999);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Gucci Flip-Flops", "Fashion", 3.50, 999);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Gucci Flip-Flops", "Fashion", 3.50, 999);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Gucci Flip-Flops", "Fashion", 3.50, 999);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Gucci Flip-Flops", "Fashion", 3.50, 999);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Gucci Flip-Flops", "Fashion", 3.50, 999);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Gucci Flip-Flops", "Fashion", 3.50, 999);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Gucci Flip-Flops", "Fashion", 3.50, 999);
 
 
 -- Decor --
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Recliner", "Decor", 29.89, 333);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Recliner", "Decor", 29.89, 333);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Recliner", "Decor", 29.89, 333);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Recliner", "Decor", 29.89, 333);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Recliner", "Decor", 29.89, 333);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Recliner", "Decor", 29.89, 333);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Recliner", "Decor", 29.89, 333);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Recliner", "Decor", 29.89, 333);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Recliner", "Decor", 29.89, 333);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Recliner", "Decor", 29.89, 333);
 
 -- appliances --
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Microwave", "Appliances", 19.20, 49);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Microwave", "Appliances", 19.20, 49);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Microwave", "Appliances", 19.20, 49);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Microwave", "Appliances", 19.20, 49);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Microwave", "Appliances", 19.20, 49);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Microwave", "Appliances", 19.20, 49);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Microwave", "Appliances", 19.20, 49);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Microwave", "Appliances", 19.20, 49);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Microwave", "Appliances", 19.20, 49);
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("Microwave", "Appliances", 19.20, 49);
 
 
 -- electronics --
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("PS4", "Electronics", );
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("PS4", "Electronics", );
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("PS4", "Electronics", );
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("PS4", "Electronics", );
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("PS4", "Electronics", );
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("PS4", "Electronics", );
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("PS4", "Electronics", );
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("PS4", "Electronics", );
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("PS4", "Electronics", );
 
-INSERT INTO inventories(product_name, categories, price, conditions)
+INSERT INTO inventor(product_name, categories, price, description)
 VALUES("PS4", "Electronics", );
 
 

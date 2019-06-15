@@ -3,7 +3,7 @@ $(document).ready(function() {
     event.preventDefault();
     console.log("you searhed for an item..");
     var searchItm = $("#item-search-bar").val().trim();
-    console.log(search_Itm);
+    console.log(searchItm);
     $.ajax({
       type: "GET",
       url: "/results/" + searchItm

@@ -3,7 +3,7 @@ module.exports = function(sequelize, DataTypes) {
     product_name: DataTypes.STRING,
     category: DataTypes.STRING,
     price: DataTypes.INTEGER,
-    conditions: DataTypes.STRING
+    description: DataTypes.STRING
   });
   return Inventory;
 };

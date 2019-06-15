@@ -11,7 +11,7 @@ module.exports = function(app) {
 
   // finding items through product name
   app.get("/results", function(req, res) {
-    db.inventories.findAll({ where: {id: req.params.product_name}}).then(function(dbInventories){
+    db.Inventory.findAll({ where: {id: req.params.product_name}}).then(function(dbInventory){
   res.render("/results");
    });
   });
