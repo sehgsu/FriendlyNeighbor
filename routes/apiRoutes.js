@@ -10,10 +10,13 @@ module.exports = function(app) {
 
   // get user data by username
   app.get("/api/users/:username/", function(req, res) {
-    db.Users.findOne({ where: {username: req.params.username}}).then(function(dbUsers) {
+    db.Users.findOne({
+      where: {
+        username: req.params.username
+      }
+    }).then(function(dbUsers) {
       res.json(dbUsers);
-  }
-    );
+    });
   });
 
   app.get("/api/transaction/", function(req, res) {
@@ -24,6 +27,17 @@ module.exports = function(app) {
 
   app.get("/api/inventory/", function(req, res) {
     db.Inventory.findAll({}).then(function(dbInventory) {
+      res.json(dbInventory);
+    });
+  });
+
+  // getting an item in the inventory by product name
+  app.get("/api/inventory/:product_name", function(req, res) {
+    db.Inventory.findAll({
+      where: {
+        product_name: req.params.product_name
+      }
+    }).then(function(dbInventory) {
       res.json(dbInventory);
     });
   });
