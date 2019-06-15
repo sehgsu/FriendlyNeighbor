@@ -2,9 +2,9 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Get all examples
-  app.get("/api/users/", function(req, res) {
-    db.Users.findAll({}).then(function(dbUsers) {
-      res.json(dbUsers);
+  app.post("/api/inventory", function(req, res) {
+    db.Inventory.create({}).then(function(dbInventory) {
+      res.json(dbInventory);
     });
   });
 
@@ -21,11 +21,11 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/api/inventory/", function(req, res){
-    db.Inventory.findAll({}).then(function(dbInventories){
-      res.json(dbInventories)
-    });
-  });
+  // app.get("/api/inventory/", function(req, res){
+  //   db.Inventory.findAll({}).then(function(dbInventories){
+  //     res.json(dbInventories)
+  //   });
+  // });
 
   // Create a new example
   app.post("/api/users", function(req, res) {

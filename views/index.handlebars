@@ -1,4 +1,4 @@
-<div class="jumbotron" id="home">
+<div class="jumbotron" style="background-color: #fff" id="home">
   <br>
   <div class="container">
     <div class="row">
@@ -7,20 +7,113 @@
        <h1 class="text-center border-dark">Friendly Neighbors</h1>
       </div> 
       <div class="col"></div>
-     <button type="button" class="col btn-outline-primary btn" id="login-btn">Login</button>
+
+      {{!-- Login Button for modal --}}
+      <button type="button" class="col btn-outline-primary btn" id="login-btn" data-toggle="modal" data-target="#loginModal">
+       Login
+      </button>
+
+      {{!-- user login modal --}}
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalCenterTitle">Login:</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+<form>
+          
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="First name">
+    </div>
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Last name">
+    </div>
+  </div><br>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="InputPassword1" placeholder="Password">
+  </div>
+</form>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="sumbit" class="btn btn-primary" id="real-login" data-dismiss="modal">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
     </div>
   </div>
   <br>
   <br>
-  <div class="container jumbotron">
+  <div class="container jumbotron" style="background-color: #e3f2fd;">
     <div class= "row">
       <div class="col"></div>
-      <div class="col-9">
-        <input class="form-control" type="search" placeholder="Search for an item.." aria-label="Search" id="item-search-bar" />
-      </div>
+      <div class="col-9"></div>
       <div class="col">
-        <button class="btn btn-outline-primary" id="search-btn">Search</button>
+        <!-- Button trigger post item modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+ Post an Item
+</button>
+
+<!-- Post item Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Post an item</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
+      <div class="modal-body">
+        <form class="clearfix mb-4" action="POST">
+          <div class="form-row">
+            <div class="col">
+              <label for="item-text">Item name</label>
+              <input type="text" id="item-text" class="form-control" aria-describedby="item-text" placeholder="Product name">
+              <label for="item-description">Description</label>
+              <textarea class="form-control" id="item-description" aria-describedby="item-description" placeholder="Description"></textarea>
+            </div>
+            <div class="col">
+              <label for ="item-category">Category</label>
+              <input type="text" id="item-category" class="form-control" placeholder="Category">
+              <label for="item-price">Price</label>
+              <input type="text" id="item-price" class="form-control" placeholder="Price">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button id="submit" class="btn btn-primary">Post!</button>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+      <h3>Items for trade:</h3>
+      <ul id="item-list" class="list-group">
+        {{#each Inventory}}
+        <li data-id="{{this.id}}" class="list-group-item">
+            <a href="item/{{this.id}}">{{this.product_name}}. {{this.description}}.{{this.category}}.{{this.price}}</a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+        </li>
+        {{/each}}
+      </ul>
     </div>
   </div>
 
@@ -53,6 +146,7 @@
     </div>
   </div> --}}
 </div>
+
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
