@@ -1,34 +1,20 @@
-$(document).ready(function () {
-  $("#search-btn").on("click", function(event){
+$(document).ready(function() {
+  $("#search-btn").on("click", function(event) {
     event.preventDefault();
     console.log("you searhed for an item..");
-    
-
-    var search_itm = $("#item-search-bar").val().trim();
-      
-    console.log(search_itm);
-      
+    var searchItm = $("#item-search-bar").val().trim();
+    console.log(searchItm);
     $.ajax({
-        type: "GET",
-        url: "/results/" + search_itm
+      type: "GET",
+      url: "/results/" + searchItm
     });
-      
   });
   $("#login-btn").on("click", function(event){
     event.preventDefault();
     console.log("Knock knock -- Who's there?");
     console.log("someone is logging in..");
-    
-  })
+  });
 });
-
-
-
-
-
-
-
-
 
 // Get references to page elements
 // var $exampleText = $("#example-text");

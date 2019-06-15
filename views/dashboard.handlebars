@@ -1,5 +1,5 @@
 <div class="jumbotron" style="background-color: #fff" id="home">
-  <br>
+
   <div class="container">
     <div class="row">
       <div class="col-2"></div>
@@ -9,9 +9,9 @@
       <div class="col"></div>
 
       {{!-- Login Button  --}}
-      <button type="button" class="col btn-outline-primary btn" id="login-btn" data-toggle="modal" data-target="#loginModal">
-       Login
-      </button>
+      <a href= "/"><button type="button" class="col btn-outline-primary btn" id="return-btn">
+       Back to Home
+      </button></a>
     </div>
   </div>
 </div> 
@@ -30,9 +30,8 @@
           <p><b>Category</b>: {{inventory.category}}</p>
           <p><strong>Price</strong>: {{inventory.price}}</p>
           <p>
-            <strong>Condition</strong>: {{inventory.conditions}}</p>
-          <p>
-            <strong>Description:</strong> {{example.description}}</p>
+            <strong>Description</strong>: {{inventory.description}}</p>
+    
         </div>
       </div>
     </div>
