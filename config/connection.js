@@ -4,6 +4,12 @@
 
 // Require mysql
 var Sequelize = require("sequelize");
+var mysql = require('mysql');
+var connection = mysql.createConnection(process.env.JAWSDB_URL);
+
+connection.connect();
+console.log("connected to jawsdb");
+connection.end();
 
 // Set up our connection information
 var sequelize = new Sequelize("l0juj0r40cp51b3r", "cf1v9fjrxlwexnou", "xidzmhmuqk2wekp3", {
