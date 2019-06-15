@@ -3,10 +3,16 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
+    db.Inventory.findAll({}).then(function(dbInventory){
+      console.log("-------------------- DB INVENTORY -----------------");
+      console.log(dbInventory);
+      console.log("-------------------- DB INVENTORY -----------------");
+     
       res.render("index", {
-        msg: "Welcome!",
+        inventory: dbInventory
       });
-    });
+    }); 
+  });
 
 // find user through username
   // app.get("/users/:username", function(req, res){

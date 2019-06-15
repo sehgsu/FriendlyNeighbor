@@ -46,7 +46,7 @@ var API = {
         "Content-Type": "application/json"
       },
       type: "POST",
-      url: "api/inventory",
+      url: "/api/inventory",
       data: JSON.stringify(Inventory)
     });
   },
@@ -66,7 +66,7 @@ var API = {
 
 // refreshExamples gets new examples from the db and repopulates the list
 var refreshInventory = function() {
-  API.getItem().then(function(data) {
+  API.getItem().then(function(Inventory) {
     var $newInventory = Inventory.map(function(Inventory) {
       var $a = $("<a>")
         .text(Inventory.product_name)

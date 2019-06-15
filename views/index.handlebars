@@ -107,7 +107,7 @@
       </div>
       <h3>Items for trade:</h3>
       <ul id="item-list" class="list-group">
-        {{#each Inventory}}
+        {{#each inventory}}
         <li data-id="{{this.id}}" class="list-group-item">
             <a href="item/{{this.id}}">{{this.product_name}}. {{this.description}}.{{this.category}}.{{this.price}}</a>
             <button class="btn btn-danger float-right delete">ｘ</button>
