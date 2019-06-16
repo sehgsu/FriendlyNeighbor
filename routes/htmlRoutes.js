@@ -14,12 +14,20 @@ module.exports = function(app) {
     }); 
   });
 
+  app.get("/inventory/:id", function(req, res) {
+    db.Inventory.findOne({ where: { id: req.params.id } }).then(function(dbInventory) {
+      res.render("/example/", {
+        Inventory: dbInventory
+      });
+    });
+  });
+
 // find user through username
-  // app.get("/users/:username", function(req, res){
-  //   db.users.findAll({ where: { id: req.params.username } }).then(function(dbUsers) {
-  //     res.render(dbUsers);
-  //   });
-  // });
+  app.get("/users/:username", function(req, res){
+    db.users.findAll({ where: { id: req.params.username } }).then(function(dbUsers) {
+      res.render(dbUsers);
+    });
+  });
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {

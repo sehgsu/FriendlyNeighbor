@@ -3,14 +3,14 @@
 // *********************************************************************************
 
 // Require mysql
-// var Sequelize = require("sequelize");
+var Sequelize = require("sequelize");
 
-// // Set up our connection information
-// var sequelize = new Sequelize("friendlyNeighbor", "root", "$ABati0602", {
-//   host: "localhost",
-//   port: 3306,
-//   dialect: "mysql"
-// });
+// Set up our connection information
+var sequelize = new Sequelize("friendlyNeighbor", "root", "$ABati0602", {
+  host: "localhost",
+  port: 3306,
+  dialect: "mysql"
+});
 
 
 // Export connection

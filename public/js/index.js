@@ -23,20 +23,13 @@
 // });
 
 
-
-
-
-
-
-
-
 // Get references to page elements
 var $newItem = $("#item-text");
 var $newItemDescription = $("#item-description");
 var $newCategory = $("#item-category");
 var $newPrice = $("#item-price");
 var $submitBtn = $("#submit");
-var $itemList = $("#item-list");
+var $deleteItemList = $("#delete-item-list");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
@@ -56,21 +49,23 @@ var API = {
       type: "GET"
     });
   },
-  deleteExample: function(id) {
+  deleteItem: function() {
+    
     return $.ajax({
-      url: "api/examples/" + id,
+      url: "api/inventory/:" + this.Inventory.id,
       type: "DELETE"
     });
+    console.log("hello")
   }
 };
 
-// refreshExamples gets new examples from the db and repopulates the list
+// refreshInventory gets new examples from the db and repopulates the list inside index.hdb
 var refreshInventory = function() {
   API.getItem().then(function(Inventory) {
     var $newInventory = Inventory.map(function(Inventory) {
       var $a = $("<a>")
         .text(Inventory.product_name)
-        .attr("href", "/item/" + Inventory.id);
+        .attr("href", "/example/" + Inventory.id);
 
       var $li = $("<li>")
         .attr({
@@ -88,15 +83,15 @@ var refreshInventory = function() {
       return $li;
     });
 
-    $itemList.empty();
-    $itemList.append($newInventory);
+    $deleteItemList.empty();
+    $deleteItemList.append($newInventory);
   });
 };
 
-// handleFormSubmit is called whenever we submit a new example
-// Save the new example to the db and refresh the list
+// handleFormSubmit is called whenever we submit a new Item.
+// Save the new item to the db and refresh the list
 var handleFormSubmit = function(event) {
-  console.log("hellow")
+  
   event.preventDefault();
 
   var postItem = {
@@ -124,16 +119,16 @@ var handleFormSubmit = function(event) {
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
 // Remove the example from the db and refresh the list
-// var handleDeleteBtnClick = function() {
-//   var idToDelete = $(this)
-//     .parent()
-//     .attr("data-id");
+var handleDeleteBtnClick = function() {
+  var idToDelete = $(this)
+    .parent()
+    .attr("data-id");
 
-//   API.deleteExample(idToDelete).then(function() {
-//     refreshExamples();
-//   });
-// };
+  API.deleteItem(idToDelete).then(function() {
+    refreshInventory();
+  });
+};
 
 // // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit);
-//$exampleList.on("click", ".delete", handleDeleteBtnClick);
+$deleteItemList.on("click", ".delete", handleDeleteBtnClick);
