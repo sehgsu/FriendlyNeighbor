@@ -5,7 +5,7 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     db.Inventory.findAll({}).then(function(dbInventory){
       console.log("-------------------- DB INVENTORY -----------------");
-      console.log(dbInventory);
+      console.log();
       console.log("-------------------- DB INVENTORY -----------------");
      
       res.render("index", {
@@ -14,20 +14,25 @@ module.exports = function(app) {
     }); 
   });
 
-  app.get("/inventory/:id", function(req, res) {
+  app.get("/example/:id", function(req, res) {
+    console.log("please come here")
     db.Inventory.findOne({ where: { id: req.params.id } }).then(function(dbInventory) {
-      res.render("/example/", {
-        Inventory: dbInventory
+      console.log("helloooooooooo")
+      res.render("example", {
+        Inventory: dbInventory,
+        
       });
     });
   });
 
+  app.get("")
+
 // find user through username
-  app.get("/users/:username", function(req, res){
-    db.users.findAll({ where: { id: req.params.username } }).then(function(dbUsers) {
-      res.render(dbUsers);
-    });
-  });
+  // app.get("/users/:username", function(req, res){
+  //   db.users.findAll({ where: { id: req.params.username } }).then(function(dbUsers) {
+  //     res.render(dbUsers);
+  //   });
+  // });
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {

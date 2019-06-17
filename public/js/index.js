@@ -45,14 +45,15 @@ var API = {
   },
   getItem: function() {
     return $.ajax({
-      url: "api/item",
+      url: "api/examples",
+      // url: "/api/item/",
       type: "GET"
     });
   },
-  deleteItem: function() {
+  deleteItem: function(id) {
     
     return $.ajax({
-      url: "api/inventory/:" + this.Inventory.id,
+      url: "api/inventory/" + id,
       type: "DELETE"
     });
     console.log("hello")
@@ -107,7 +108,7 @@ var handleFormSubmit = function(event) {
   }
 
   API.saveItem(postItem).then(function() {
-    refreshInventory();
+    location.reload();
   });
 
   
